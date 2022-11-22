@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html><head>
+<base target="_blank">
+<title>All That Is Solids</title>
+
+<style type="text/css"><!--
+
+.outer {
+  display: table;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.left {
+  display: table-cell;
+  width: 25%;
+  background-color: #90D2EC;
+}
+
+.right {
+  display: table-cell;
+  width: 25%;
+  right: 0;
+  background-color: #90D2EC;
+}
+
+.middle {
+  display: table-cell;
+  vertical-align: middle;
+  /*background-color: #FA7268;*/
+  /*background-color: #90D2EC;*/
+}
+
+.inner {
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
+}
+
+.centergrid {
+  display: grid; 
+  justify-content: center; 
+  align-content: center; 
+  gap: 5px;
+  grid-template: 150px 150px 150px / 150px 150px 150px; 
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*padding: 10px;*/
+}
+  
+a {
+  font-family: sans-serif;
+  text-align: center;
+  text-justify: newspaper;
+  letter-spacing: 3px;
+  font-size: 18px; 
+  text-decoration: none;
+  color: #214e64;
+  margin:auto;
+}
+   
+a:hover {
+   color: #ff9898;
+   }
+
+.sitetitle {
+  font-family: sans-serif;
+  text-align: center;
+  text-justify: newspaper;
+  letter-spacing: 2px;
+  font-size: 45px; 
+  text-decoration: none;
+  color: #000000;
+  margin:auto;
+  padding-bottom:25px;
+}
+
+.subheader {
+  font-family: sans-serif;
+  text-align: center;
+  text-justify: newspaper;
+  letter-spacing: 2px;
+  font-size: 18px; 
+  text-decoration: none;
+  color: #000000;
+  margin:auto;
+  padding-bottom:25px;
+}
+
+.dark {
+    background-color: #214e64;
+    color: #214e64;
+}
+.light {
+    background-color: #ff9898;
+}
+.lighttext {
+    color: #ff9898;
+}
+.medium {
+    background-color: #c16172;
+}
+.mediumtext {
+    color: #c16172;
+}
+
+/* 3JS */
+canvas {
+width: 100%;
+height: 100%;
+display: block;
+}
+
+*[data-selectionobj] {
+display: inline-block;
+width:100%;
+height:100%;
+}
+
+--></style>
+
+</head>
+<body>
+<script src='./3js/three.js'></script>
+<script src='./3js/OBJLoader.js'></script>
+<script src='./3js/OrbitControls.js'></script>
+<script src='./3js/render.js'></script>
+
+<div class="outer">
+
+<!--<div class="left"></div> -->
+
+<div class="middle">
+<div class="inner">
+<h1 class="sitetitle">All That Is Solids</h1>
+<p class="subheader">Personal Website of Richard Liu</p>
+<div class="centergrid">
+  <div class="grid-item"></div>
+  <div class="grid-item"><a href="https://decatoncheir.neocities.org/about.html">About<br>Me</a></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"><a href="https://decatoncheir.neocities.org/research.html">Research</a></div>
+  <div class="grid-item"><span data-selectionobj="bunny.obj" data-lookx=0 data-looky=0.25 data-lookz=0 data-camerax=-0.2 data-cameray=0.28 data-cameraz=0.06></span></div>
+  <div class="grid-item"><a>Blog</a></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"><a href="https://decatoncheir.neocities.org/socials.html">Socials</a></div>
+  <div class="grid-item"></div>
+</div>
+</div>
+</div>
+
+<!--<div class="right"></div> -->
+
+</div>
+
+<script src='./3js/canvas.js'></script>
+</body></html>

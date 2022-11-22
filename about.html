@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css"><!--
+
+  .outer {
+    display: table;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .left {
+    display: table-cell;
+    width: 25%;
+    background-color: #90D2EC;
+  }
+  
+  .right {
+    display: table-cell;
+    width: 25%;
+    right: 0;
+    background-color: #90D2EC;
+  }
+  
+  .middle {
+    display: table-cell;
+    vertical-align: middle;
+    /*background-color: #FA7268;*/
+    /*background-color: #90D2EC;*/
+  }
+  
+  .inner {
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+  }
+  
+  .centergrid {
+    display: grid; 
+    justify-content: center; 
+    align-content: center; 
+    gap: 5px;
+    grid-template: 150px 150px 150px / 150px 150px 150px; 
+  }
+  
+  .grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*padding: 10px;*/
+  }
+  
+  .nav {
+    font-family: sans-serif;
+    text-align: center;
+    text-justify: newspaper;
+    letter-spacing: 3px;
+    font-size: 18px; 
+    text-decoration: none;
+    color: #214e64;
+    margin:auto;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  a:visited {
+    color: #000000;
+  }
+  
+  a:hover {
+   color: #ff9898;
+  }
+  
+  a:active {
+    color: #000000;
+  }
+  
+  .image {
+    position:relative;
+    width:12%;
+    display: inline-block;
+  }
+  
+  .text {
+    left: 0;
+    position:absolute;
+    text-align:center;
+    top: 30px;
+    width: 100%
+  }
+
+  h1 {
+    font-family: sans-serif;
+    text-justify: newspaper;
+    letter-spacing: 3px;
+    font-size: 34px; 
+    text-decoration: none;
+    margin:auto;
+    padding-bottom: 10px;
+    padding-left: 25px;
+    color: #214e64;
+  }
+  
+  p {
+    font-family: sans-serif;
+    text-justify: newspaper;
+    letter-spacing: 1.5px;
+    font-size: 16px; 
+    text-decoration: none;
+    margin:auto;
+  }
+  
+  .sitetitle {
+    font-family: sans-serif;
+    text-align: center;
+    text-justify: newspaper;
+    letter-spacing: 2px;
+    font-size: 45px; 
+    text-decoration: none;
+    color: #000000;
+    margin:auto;
+    padding-bottom:25px;
+  }
+  
+  .subheader {
+    font-family: sans-serif;
+    text-align: center;
+    text-justify: newspaper;
+    letter-spacing: 2px;
+    font-size: 18px; 
+    text-decoration: none;
+    color: #000000;
+    margin:auto;
+    padding-bottom:25px;
+  }
+  
+  .dark {
+      background-color: #214e64;
+      color: #214e64;
+  }
+  .light {
+      background-color: #ff9898;
+  }
+  .lighttext {
+      color: #ff9898;
+  }
+  .medium {
+      background-color: #c16172;
+  }
+  .mediumtext {
+      color: #c16172;
+  }
+  
+  /* 3JS */
+  canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  }
+  
+  *[data-selectionobj] {
+  display: inline-block;
+  width:100%;
+  height:100%;
+  }
+  
+  --></style>
+</head>
+<body>
+<div class="outer">
+<div class="middle">
+<div class="inner">
+    <h1>Richard Liu</h1>
+    <p><img src="./images/me.jpeg" alt="meinatree" align="left" style="padding-left:10px;padding-right:10px"> I am a 1st year PhD student in the <a href="https://threedle.cs.uchicago.edu/">3DL lab</a> at UChicago advised by <a href="https://people.cs.uchicago.edu/~ranahanocka/">Rana Hanocka</a>. 
+      <br><br> My interests lie at the intersection of differential geometry, 3D deep learning, and computer graphics. 
+      <br><br> I received my B.S. in Mathematics and B.A. in Economics from UChicago in 2019.
+      <br><br> In my free time, I workout, bike, play volleyball, board games, and the piano. </p>
+    
+    <br><br>
+    <div class="image">
+    <img src="./images/cube.png" alt="home" style="width:100%">
+    <a href="https://decatoncheir.neocities.org/" style="font-weight: bold;"><div class="text" style="padding-top:5%">Home</div></a>
+    </div>
+    <div class="image">
+    <img src="./images/oct.png" alt="about" style="width:100%">
+    <a href="https://decatoncheir.neocities.org/about.html" style="font-weight: bold;"><div class="text" style="padding-top:5%">About</div></a>
+    </div>
+    <div class="image">
+    <img src="./images/doubletet.png" alt="research" style="width:100%">
+    <a href="https://decatoncheir.neocities.org/research.html" style="font-weight: bold;"><div class="text" style="padding-top:5%">Research</div></a>
+    </div>
+    <div class="image">
+    <img src="./images/tet.png" alt="blog" style="width:100%">
+    <a href="https://decatoncheir.neocities.org/" style="font-weight: bold;"><div class="text" style="padding-top:5%">Blog</div></a>
+    </div>
+    <div class="image">
+    <img src="./images/dodec.png" alt="socials" style="width:100%">
+    <a href="https://decatoncheir.neocities.org/socials.html" style="font-weight: bold;"><div class="text" style="padding-top:5%">Socials</div></a>
+    </div>
+    
+    <!--<a href="https://decatoncheir.neocities.org/research.html">-->
+    <!--<img src="./images/doubletet.png" alt="research" style="width:25%;height:auto">-->
+    <!--<span>Research</span>-->
+    <!--</a>-->
+    <!--<a href="https://decatoncheir.neocities.org">-->
+    <!--<img src="./images/tet.png" alt="blog" style="width:25%;height:auto">-->
+    <!--<span>Blog</span>-->
+    <!--</a>-->
+    <!--<a href="https://decatoncheir.neocities.org/socials">-->
+    <!--<img src="./images/oct.png" alt="socials" style="width:25%;height:auto">-->
+    <!--<span>Socials</span>-->
+    <!--</a>-->
+    
+</div>
+</div>
+</div>
+</body>
+</html>
