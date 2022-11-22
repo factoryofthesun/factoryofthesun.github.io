@@ -67,21 +67,23 @@
     color: #214e64;
     margin:auto;
   }
+
+  .pub {
+    width:100%;
+    height:auto;
+  }
   
   a {
     text-decoration: none;
+    color: #0000FF
   }
   
   a:visited {
-    color: #000000;
-  }
-  
+    color: #0000FF;
+   }
+
   a:hover {
    color: #ff9898;
-  }
-  
-  a:active {
-    color: #000000;
   }
   
   .image {
@@ -105,15 +107,13 @@
     font-size: 34px; 
     text-decoration: none;
     margin:auto;
-    padding-bottom: 10px;
-    padding-left: 25px;
     color: #214e64;
   }
   
   p {
     font-family: sans-serif;
     text-justify: newspaper;
-    letter-spacing: 1.5px;
+    letter-spacing: 0px;
     font-size: 16px; 
     text-decoration: none;
     margin:auto;
@@ -180,44 +180,71 @@
 <div class="left"></div> 
 <div class="middle">
 <div class="inner">
-    <h1>Research</h1>
-    
-    <h2>Text2Mesh: Text-Driven Neural Stylization for Meshes arXiv, 12/6/21</h2>
-    <p><a href="https://arxiv.org/abs/2112.03221">Paper</a></p>
-    <p><a href="https://threedle.github.io/text2mesh/">Website</a></p>
-    
-    <h2>Designing Online Advertisements via Bandit and Reinforcement Learning ICML '21 RL4RealLife Workshop, 7/23/21</h2>
-    <p><a href="https://drive.google.com/file/d/1bj7GJnzwq3UZQLoGnsDuNlK94c_eNYED/view?usp=sharing">Paper</a></p>
-    <p><a href="https://drive.google.com/file/d/1FNpPYoUwnGHuuKs9T-AYKqOkaRYXQlK2/view?usp=sharing">Appendix</a></p>
-    <p><a href="https://sites.google.com/view/RL4RealLife">Workshop</a></p>
-    
+    <h1>Publications</h1>
+    <br>
+    <div class="pub">
+      <img src="./images/dawand.png" alt="dawand" align="left" style="width:25%;padding-right:10px">
+      <p style="padding-top:5px">
+      <span style="vertical-align:middle">
+      <strong>DA Wand: Distortion-Aware Selection using Neural Mesh Parameterization</strong>
+      <br>
+      <strong>Richard Liu</strong>, Noam Aigerman, Vladimir G. Kim, Rana Hanocka
+      <br>
+      CVPR Submission, 2023
+      </span>
+      </p>
+    </div>
+    <br>
+    <br>
+    <div class="pub">
+      <img src="./images/t2mesh.png" alt="t2mesh" align="left" style="width:25%;padding-right:10px">
+      <p style="padding-top:5px">
+      <span style="vertical-align:middle">
+      <strong>Text2Mesh: Text-Driven Neural Stylization for Meshes</strong>
+      <br>
+      Oscar Michel*, Roi Bar-On*, <strong>Richard Liu*</strong>, Sagie Benaim, Rana Hanocka
+      <br>
+      CVPR Oral, 2022
+      <br>
+      <a href="https://openaccess.thecvf.com/content/CVPR2022/papers/Michel_Text2Mesh_Text-Driven_Neural_Stylization_for_Meshes_CVPR_2022_paper.pdf">Paper</a>
+      <a href="https://threedle.github.io/text2mesh/">Website</a>
+      </span>
+      </p>
+    </div>
+    <br>
+
     <h1>Talks</h1>
     
-    <h2>Introduction to Mesh Parameterization 3DL Talk Series, 9/23/21</h2>
-    <p><a href="./researchfiles/20210923_meshparam.pdf">Notes</a></p>
-    <p><a href="./researchfiles/20210923_meshparamslides.pdf">Slides</a></p>
-    <p><a href="https://drive.google.com/file/d/1g2HXCX8alo4_RHkUqzlh0GhfGerkB7G3/view?usp=sharing">Recording</a></p>
-    
+    <div class="pub">
+      <img src="./images/param.png" alt="param" align="left" style="width:25%;padding-right:10px">
+      <span style="vertical-align:middle">
+      <p style="padding-top:15px"><strong>Introduction to Mesh Parameterization</strong>
+      <br>
+      3DL Talk Series
+      <br>
+      <a href="./researchfiles/20210923_meshparam.pdf">Notes</a>
+      <a href="./researchfiles/parameteriationtalk_51722.pdf">Slides</a>
+      <a href="https://drive.google.com/file/d/1g2HXCX8alo4_RHkUqzlh0GhfGerkB7G3/view?usp=sharing">Recording</a>
+      </p>
+      </span>
+    </div>
+
     <br><br>
     <div class="image">
     <img src="./images/cube.png" alt="home" style="width:100%">
-    <a href="https://decatoncheir.neocities.org/" style="font-weight: bold;"><div class="text" style="padding-top:5%">Home</div></a>
+    <a href="https://rgliu.com/" style="font-weight: bold;color:black"><div class="text" style="padding-top:5%">Home</div></a>
     </div>
     <div class="image">
     <img src="./images/oct.png" alt="about" style="width:100%">
-    <a href="https://decatoncheir.neocities.org/about.html" style="font-weight: bold;"><div class="text" style="padding-top:5%">About</div></a>
+    <a href="https://rgliu.com/about" style="font-weight: bold;color:black"><div class="text" style="padding-top:5%">About</div></a>
     </div>
     <div class="image">
     <img src="./images/doubletet.png" alt="research" style="width:100%">
-    <a href="https://decatoncheir.neocities.org/research.html" style="font-weight: bold;"><div class="text" style="padding-top:5%">Research</div></a>
+    <a href="https://rgliu.com/research" style="font-weight: bold;color:black"><div class="text" style="padding-top:5%">Research</div></a>
     </div>
     <div class="image">
     <img src="./images/tet.png" alt="blog" style="width:100%">
-    <a href="https://decatoncheir.neocities.org/" style="font-weight: bold;"><div class="text" style="padding-top:5%">Blog</div></a>
-    </div>
-    <div class="image">
-    <img src="./images/dodec.png" alt="socials" style="width:100%">
-    <a href="https://decatoncheir.neocities.org/socials.html" style="font-weight: bold;"><div class="text" style="padding-top:5%">Socials</div></a>
+    <a href="https://rgliu.com/" style="font-weight: bold;color:black"><div class="text" style="padding-top:5%">Blog</div></a>
     </div>
     
 </div>
