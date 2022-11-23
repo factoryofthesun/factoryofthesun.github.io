@@ -106,7 +106,6 @@ function main() {
                 // child.add( wireframe );
             }
         } );
-
             scene.add(object3d);
         }
 
@@ -131,6 +130,13 @@ function main() {
             });
         
         return (time, rect) => {
+            scene.traverse( function ( child ) {
+
+                if ( child instanceof THREE.Mesh ) {
+                    child.rotation.y = time * 0.1;
+                }
+            } );
+
             camera.aspect = rect.width / rect.height;
             camera.updateProjectionMatrix();
             controls.update();
