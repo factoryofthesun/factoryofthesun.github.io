@@ -198,49 +198,27 @@
   transform: translate(-50%,-50%);
 }
 
-.overlay {
-  position:absolute;
-  top:0;
-  left:0;
-  z-index:1;
-}
+.redirect {
+  /* Make video to at least 100% wide and tall */
+  min-width: 50%; 
+  min-height: 50%; 
 
-.rightoverlay {
-  position:relative;
-  text-align:right;
-  z-index:1;
+  /* Setting width & height to auto prevents the browser from stretching or squishing the video */
+  width: auto;
+  height: auto;
+  
+  /* Center the video */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
 }
 
   --></style>
 </head>
-<body>                                                                                                                                                 
-<div class="video-container">
-  <video autoplay muted controls loop>
-    <source src="images/hey.mp4" type="video/mp4"/>
-  </video>
-</div>
-<pre class="overlay">
-  ,---,            ,---,         
-  ,--,                                                           ,--.                                                                                   ,`--.' |         ,`--.' |         
-,--.'|                                                         ,--.'|                                                                                   |   :  :         |   :  :         
-,--,  | :            ,-.----.  ,-.----.                       ,--,:  : |                                        ,---,                                      '   '  ;         '   '  ;         
-,---.'|  : '            \    /  \ \    /  \                   ,`--.'`|  ' :                   .---.               /_ ./|                       __  ,-.        |   |  |         |   |  |         
-|   | : _' |            |   :    ||   :    |                  |   :  :  | |                  /. ./|         ,---, |  ' :                     ,' ,'/ /|        '   :  ;         '   :  ;         
-:   : |.'  |  ,--.--.   |   | .\ :|   | .\ :     .--,         :   |   \ | :   ,---.       .-'-. ' |        /___/ \.  : |  ,---.     ,--.--.  '  | |' |        |   |  '         |   |  '         
-|   ' '  ; : /       \  .   : |: |.   : |: |   /_ ./|         |   : '  '; |  /     \     /___/ \: |         .  \  \ ,' ' /     \   /       \ |  |   ,'        '   :  |         '   :  |         
-'   |  .'. |.--.  .-. | |   |  \ :|   |  \ :, ' , ' :         '   ' ;.    ; /    /  | .-'.. '   ' .          \  ;  `  ,'/    /  | .--.  .-. |'  :  /          ;   |  ;         ;   |  ;         
-|   | :  | ' \__\/: . . |   : .  ||   : .  /___/ \: |         |   | | \   |.    ' / |/___/ \:     '           \  \    '.    ' / |  \__\/: . .|  | '           `---'. |         `---'. |         
-'   : |  : ; ," .--.; | :     |`-':     |`-'.  \  ' |         '   : |  ; .''   ;   /|.   \  ' .\               '  \   |'   ;   /|  ," .--.; |;  : |            `--..`;          `--..`;         
-|   | '  ,/ /  /  ,.  | :   : :   :   : :    \  ;   :         |   | '`--'  '   |  / | \   \   ' \ |             \  ;  ;'   |  / | /  /  ,.  ||  , ;           .--,_            .--,_            
-;   : ;--' ;  :   .'   \|   | :   |   | :     \  \  ;         '   : |      |   :    |  \   \  |--"               :  \  \   :    |;  :   .'   \---'            |    |`.         |    |`.         
-|   ,/     |  ,     .-./`---'.|   `---'.|      :  \  \        ;   |.'       \   \  /    \   \ |                   \  ' ;\   \  / |  ,     .-./                `-- -`, ;        `-- -`, ;        
-'---'       `--`---'      `---`     `---`       \  ' ;        '---'          `----'      '---"                     `--`  `----'   `--`---'                      '---`"           '---`"         
-                                           `--`  
-<img src="images/happy-new-year-new-year.gif"/>
-<div class="rightoverlay">
-  <div style="margin-top:-150px;">Turn on sound below</div>
-  <img src="images/downarrow.png" width="100"/>
-</div>
-</pre>
+<body>                          
+  <div class="redirect">
+    <a href="https://rgliu.com/surprise">psst hey. click me.</a>
+  </div>                                                                                                                       
 </body>
 </html>
