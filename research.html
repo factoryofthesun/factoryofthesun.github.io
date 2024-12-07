@@ -13,41 +13,43 @@
     height: 100%;
     width: 100%;
   }
-  
+
   .left {
     display: table-cell;
     width: 25%;
     background-color: #90D2EC;
   }
-  
+
   .right {
     display: table-cell;
     width: 25%;
     right: 0;
     background-color: #90D2EC;
   }
-  
+
   .middle {
     display: table-cell;
     vertical-align: middle;
     /*background-color: #FA7268;*/
     /*background-color: #90D2EC;*/
   }
-  
+
   .inner {
     margin-left: auto;
     margin-right: auto;
+    box-sizing: border-box;
+    padding: 10px;
     width: 800px;
   }
-  
+
   .centergrid {
-    display: grid; 
-    justify-content: center; 
-    align-content: center; 
+    display: grid;
+    justify-content: center;
+    align-content: center;
     gap: 5px;
-    grid-template: 150px 150px 150px / 150px 150px 150px; 
+    grid-template: 150px 150px 150px / 150px 150px 150px;
   }
-  
+
   .grid-item {
     background-color: rgba(255, 255, 255, 0.8);
     border: 1px solid rgba(0, 0, 0, 0.8);
@@ -56,13 +58,13 @@
     align-items: center;
     /*padding: 10px;*/
   }
-  
+
   .nav {
     font-family: sans-serif;
     text-align: center;
     text-justify: newspaper;
     letter-spacing: 3px;
-    font-size: 18px; 
+    font-size: 18px;
     text-decoration: none;
     color: #214e64;
     margin:auto;
@@ -72,12 +74,12 @@
     width:100%;
     height:auto;
   }
-  
+
   a {
     text-decoration: none;
     color: #0000FF
   }
-  
+
   a:visited {
     color: #0000FF;
    }
@@ -85,13 +87,13 @@
   a:hover {
    color: #ff9898;
   }
-  
+
   .image {
     position:relative;
     width:12%;
     display: inline-block;
   }
-  
+
   .text {
     left: 0;
     position:absolute;
@@ -104,45 +106,45 @@
     font-family: sans-serif;
     text-justify: newspaper;
     letter-spacing: 3px;
-    font-size: 34px; 
+    font-size: 34px;
     text-decoration: none;
     margin:auto;
     color: #214e64;
   }
-  
+
   p {
     font-family: sans-serif;
     text-justify: newspaper;
     letter-spacing: 0px;
-    font-size: 16px; 
+    font-size: 16px;
     text-decoration: none;
     margin:auto;
   }
-  
+
   .sitetitle {
     font-family: sans-serif;
     text-align: center;
     text-justify: newspaper;
     letter-spacing: 2px;
-    font-size: 45px; 
+    font-size: 45px;
     text-decoration: none;
     color: #000000;
     margin:auto;
     padding-bottom:25px;
   }
-  
+
   .subheader {
     font-family: sans-serif;
     text-align: center;
     text-justify: newspaper;
     letter-spacing: 2px;
-    font-size: 18px; 
+    font-size: 18px;
     text-decoration: none;
     color: #000000;
     margin:auto;
     padding-bottom:25px;
   }
-  
+
   .dark {
       background-color: #214e64;
       color: #214e64;
@@ -159,28 +161,92 @@
   .mediumtext {
       color: #c16172;
   }
-  
+
   /* 3JS */
   canvas {
   width: 100%;
   height: 100%;
   display: block;
   }
-  
+
   *[data-selectionobj] {
   display: inline-block;
   width:100%;
   height:100%;
   }
-  
+
   --></style>
 </head>
 <body>
 <div class="outer">
-<div class="left"></div> 
+<div class="left"></div>
 <div class="middle">
 <div class="inner">
     <h1>Publications</h1>
+    <br>
+    <div class="pub">
+      <img src="./images/wir3d.png" alt="wir3d" align="left" style="width:25%;padding-right:10px">
+      <p style="padding-top:10px">
+      <span style="vertical-align:middle">
+      <strong>WIR3D: Semantic and Geometric-Aware 3D Shape Abstraction</strong>
+      <br>
+      <strong>Richard Liu</strong>, Daniel Fu, Noah Tan, Itai Lang, Rana Hanocka
+      <br>
+      Under Review
+      <a href="">Paper</a>
+      <a href="">Website</a>
+      </span>
+      </p>
+    </div>
+    <br>
+    <br>
+    <div class="pub">
+      <img src="./images/tedi.gif" alt="tedi" align="left" style="width:25%;padding-right:10px">
+      <p style="padding-top:20px">
+      <span style="vertical-align:middle">
+      <strong>TEDi: Temporally-Entangled Diffusion for Long-Term Motion Synthesis</strong>
+      <br>
+      Zihan Zhang, <strong>Richard Liu</strong>, Rana Hanocka, Kfir Aberman
+      <br>
+      SIGGRAPH, 2024
+      <a href="https://dl.acm.org/doi/10.1145/3641519.3657515">Paper</a>
+      <a href="https://threedle.github.io/TEDi/">Website</a>
+      </span>
+      </p>
+    </div>
+    <br>
+    <br>
+    <div class="pub">
+      <img src="./images/shapeit.png" alt="shapeit" align="left" style="width:25%;padding-right:10px">
+      <p style="padding-top:0px">
+      <span style="vertical-align:middle">
+      <strong>Towards Multimodal Interaction with AI-Infused Shape-Changing Interfaces</strong>
+      <br>
+      Chenfeng Gao, Wanli Qian, <strong>Richard Liu</strong>, Rana Hanocka, Ken Nakagaki
+      <br>
+      UIST Poster, 2024
+      <a href="https://dl.acm.org/doi/10.1145/3672539.3686315">Paper</a>
+      <a href="https://www.youtube.com/watch?v=gTzvI8wKQB0">Video</a>
+      </span>
+      </p>
+    </div>
+    <br>
+    <br>
+    <div class="pub">
+      <img src="./images/hyperfields.png" alt="hyperfields" align="left" style="width:25%;padding-right:10px">
+      <p style="padding-top:5px">
+      <span style="vertical-align:middle">
+      <strong>HyperFields: Towards Zero-Shot Generation of NERFs from Text</strong>
+      <br>
+      Sudarshan Babu*, <strong>Richard Liu*</strong>, Avery Zhou*, Michael Maire, Greg Shakhnarovich, Rana Hanocka
+      <br>
+      ICML, 2024
+      <a href="https://icml.cc/virtual/2024/poster/34847">Paper</a>
+      <a href="https://threedle.github.io/hyperfields/">Website</a>
+      </span>
+      </p>
+    </div>
+    <br>
     <br>
     <div class="pub">
       <img src="./images/dawand.png" alt="dawand" align="left" style="width:25%;padding-right:10px">
@@ -190,8 +256,8 @@
       <br>
       <strong>Richard Liu</strong>, Noam Aigerman, Vladimir G. Kim, Rana Hanocka
       <br>
-      ArXiv, 2022
-      <a href="https://drive.google.com/file/d/1OkGwIPQb9RUeT5aw-X_tdBAPG0bB4dNQ/view?usp=share_link">Paper</a>
+      CVPR, 2023
+      <a href="https://cvpr.thecvf.com/virtual/2023/poster/21477">Paper</a>
       <a href="https://threedle.github.io/DA-Wand/">Website</a>
       </span>
       </p>
@@ -213,12 +279,25 @@
       </span>
       </p>
     </div>
-    <br>
+    <br><br>
 
     <h1>Talks</h1>
-    
+
     <div class="pub">
-      <img src="./images/param.png" alt="param" align="left" style="width:25%;padding-right:10px">
+      <img src="./images/parameterization.gif" alt="param" align="left" style="width:22%;padding-right:10px">
+      <span style="vertical-align:middle">
+      <p style="padding-top:30px"><strong>Introduction to Mesh Parameterization</strong>
+      <br>
+      MIT Summer Geometry Initiative, 2024
+      <br>
+      <a href="https://docs.google.com/presentation/d/1fBOMzS0Cz7gcR16cTWFyzTTZaw8uCXgRhDV3iSZc3MY/edit?usp=sharing">Slides</a>
+      </p>
+      </span>
+    </div>
+    <br><br>
+
+    <div class="pub">
+      <img src="./images/param.png" alt="param" align="left" style="width:22%;padding-right:10px">
       <span style="vertical-align:middle">
       <p style="padding-top:15px"><strong>Introduction to Mesh Parameterization</strong>
       <br>
@@ -230,28 +309,47 @@
       </p>
       </span>
     </div>
-
     <br><br>
+
+    <h1>Service</h1>
+    <br>
+    <div class="pub">
+      <img src="./images/mandelbrot.png" alt="mandelbrot" align="left" style="width:80px;padding-right:10px">
+      <span style="vertical-align:middle">
+      <p style="padding-top:5px"><strong>Project Mentor</strong>
+      <br>
+      MIT Summer Geometry Initiative, 2022
+      <br>
+      <a href="https://summergeometry.org/sgi2022/">Blog</a>
+      </p>
+      </span>
+    </div>
+    <br><br>
+
     <div class="image">
-    <img src="./images/cube.png" alt="home" style="width:100%">
+    <img src="./images/shapes/cube.png" alt="home" style="width:100%">
     <a href="https://rgliu.com/" style="font-weight: bold;color:black"><div class="text" style="padding-top:5%">Home</div></a>
     </div>
     <div class="image">
-    <img src="./images/oct.png" alt="about" style="width:100%">
+    <img src="./images/shapes/oct.png" alt="about" style="width:100%">
     <a href="https://rgliu.com/about" style="font-weight: bold;color:black"><div class="text" style="padding-top:5%">About</div></a>
     </div>
     <div class="image">
-    <img src="./images/doubletet.png" alt="research" style="width:100%">
+    <img src="./images/shapes/doubletet.png" alt="research" style="width:100%">
     <a href="https://rgliu.com/research" style="font-weight: bold;color:black"><div class="text" style="padding-top:5%">Research</div></a>
     </div>
     <div class="image">
-    <img src="./images/tet.png" alt="blog" style="width:100%">
+      <img src="./images/shapes/sphere.png" alt="cv" style="width:100%">
+      <a href="./cv/current.pdf" style="font-weight: bold;color:black"><div class="text" style="padding-top:5%">CV</div></a>
+    </div>
+    <div class="image">
+    <img src="./images/shapes/tet.png" alt="blog" style="width:100%">
     <a href="https://rgliu.com/" style="font-weight: bold;color:black"><div class="text" style="padding-top:5%">Blog</div></a>
     </div>
-    
+
 </div>
 </div>
-<div class="right"></div> 
+<div class="right"></div>
 </div>
 </body>
 </html>
