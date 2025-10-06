@@ -19,10 +19,5 @@ announcements:
   enabled: false # includes a list of news items
   scrollable: true # adds a vertical scroll bar if there are more than 3 news items
   limit: 5 # leave blank to include all the news in the `_news` folder
-
-latest_posts:
-  enabled: false
-  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 3 # leave blank to include all the blog posts
 ---
 I am a 4th year PhD student in the [3DL lab](https://threedle.cs.uchicago.edu/) at UChicago advised by [Rana Hanocka](https://people.cs.uchicago.edu/~ranahanocka/) My primary research interests are in applied deep learning to geometry processing and computer graphics, but I am interested in general applications of deep learning to science.
