@@ -1,15 +1,12 @@
 ---
 ---
-@article{text2mesh,
-    author = {Michel*, Oscar
-              and Bar-On*, Roi
-              and Liu*, Richard
-              and Benaim, Sagie
-              and Hanocka, Rana
-              },
-    title = {Text2Mesh: Text-Driven Neural Stylization for Meshes},
-    journal = {arXiv preprint arXiv:2112.03221},
-    year  = {2021},
+@InProceedings{text2mesh,
+    author    = {Michel*, Oscar and Bar-On*, Roi and Liu*, Richard and Benaim, Sagie and Hanocka, Rana},
+    title     = {Text2Mesh: Text-Driven Neural Stylization for Meshes},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2022},
+    pages     = {13492-13502},
     preview={t2mesh.png},
     abs={In this work, we develop intuitive controls for editing the style of 3D objects. Our framework, Text2Mesh, stylizes a 3D mesh by predicting color and local geometric details which conform to a target text prompt. We consider a disentangled representation of a 3D object using a fixed mesh input (content) coupled with a learned neural network, which we term neural style field network. In order to modify style, we obtain a similarity score between a text prompt (describing style) and a stylized mesh by harnessing the representational power of CLIP. Text2Mesh requires neither a pre-trained generative model nor a specialized 3D mesh dataset. It can handle low-quality meshes (non-manifold, boundaries, etc.) with arbitrary genus, and does not require UV parameterization. We demonstrate the ability of our technique to synthesize a myriad of styles over a wide variety of 3D meshes.},
     website={https://threedle.github.io/text2mesh/},
@@ -17,4 +14,4 @@
     video={https://www.youtube.com/watch?v=BmmdMlAWaf4},
     code={https://github.com/threedle/text2mesh},
     selected={true}
-    }
+}
