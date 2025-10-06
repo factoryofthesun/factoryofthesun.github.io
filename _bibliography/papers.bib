@@ -1,21 +1,5 @@
 ---
 ---
-@InProceedings{text2mesh,
-    author    = {Michel*, Oscar and Bar-On*, Roi and Liu*, Richard and Benaim, Sagie and Hanocka, Rana},
-    title     = {Text2Mesh: Text-Driven Neural Stylization for Meshes},
-    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
-    month     = {June},
-    year      = {2022},
-    pages     = {13492-13502},
-    preview={t2mesh.png},
-    abs={In this work, we develop intuitive controls for editing the style of 3D objects. Our framework, Text2Mesh, stylizes a 3D mesh by predicting color and local geometric details which conform to a target text prompt. We consider a disentangled representation of a 3D object using a fixed mesh input (content) coupled with a learned neural network, which we term neural style field network. In order to modify style, we obtain a similarity score between a text prompt (describing style) and a stylized mesh by harnessing the representational power of CLIP. Text2Mesh requires neither a pre-trained generative model nor a specialized 3D mesh dataset. It can handle low-quality meshes (non-manifold, boundaries, etc.) with arbitrary genus, and does not require UV parameterization. We demonstrate the ability of our technique to synthesize a myriad of styles over a wide variety of 3D meshes.},
-    website={https://threedle.github.io/text2mesh/},
-    pdf={https://arxiv.org/pdf/2112.03221},
-    video={https://www.youtube.com/watch?v=BmmdMlAWaf4},
-    code={https://github.com/threedle/text2mesh},
-    selected={true}
-}
-
 @InProceedings{wir3d,
     author    = {Liu, Richard and Fu, Daniel and Tan, Noah and Lang, Itai, and Hanocka, Rana},
     title     = {WIR3D: Visually-Informed and Geometry-Aware 3D Shape Abstraction},
@@ -57,22 +41,6 @@
   selected={true}
 }
 
-@InProceedings{dawand,
-    author    = {Liu, Richard and Aigerman, Noam and Kim, Vladimir G. and Hanocka, Rana},
-    title     = {DA Wand: Distortion-Aware Selection Using Neural Mesh Parameterization},
-    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
-    month     = {June},
-    year      = {2023},
-    pages     = {16739-16749},
-    abs={We present a neural technique for learning to select a local sub-region around a point which can be used for mesh parameterization. The motivation for our framework is driven by interactive workflows used for decaling, texturing, or painting on surfaces. Our key idea is to incorporate segmentation probabilities as weights of a classical parameterization method, implemented as a novel differentiable parameterization layer within a neural network framework. We train a segmentation network to select 3D regions that are parameterized into 2D and penalized by the resulting distortion, giving rise to segmentations which are distortion-aware. Following training, a user can use our system to interactively select a point on the mesh and obtain a large, meaningful region around the selection which induces a low-distortion parameterization.},
-  website={https://threedle.github.io/DA-Wand/},
-  pdf={https://openaccess.thecvf.com/content/CVPR2023/papers/Liu_DA_Wand_Distortion-Aware_Selection_Using_Neural_Mesh_Parameterization_CVPR_2023_paper.pdf},
-  code={https://github.com/threedle/DA-Wand},
-  preview={dawand.png},
-  note={Blender extension available at \url{https://extensions.blender.org/approval-queue/da-wand/}},
-  selected={true}
-}
-
 @inproceedings{shapeit,
     author = {Gao, Chenfeng and Qian, Wanli and Liu, Richard and Hanocka, Rana and Nakagaki, Ken},
     title = {Towards Multimodal Interaction with AI-Infused Shape-Changing Interfaces},
@@ -92,4 +60,36 @@
     video={https://www.youtube.com/watch?v=gTzvI8wKQB0},
     pdf={https://dl.acm.org/doi/10.1145/3672539.3686315},
     preview={shapeit.png}
+}
+
+@InProceedings{dawand,
+    author    = {Liu, Richard and Aigerman, Noam and Kim, Vladimir G. and Hanocka, Rana},
+    title     = {DA Wand: Distortion-Aware Selection Using Neural Mesh Parameterization},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2023},
+    pages     = {16739-16749},
+    abs={We present a neural technique for learning to select a local sub-region around a point which can be used for mesh parameterization. The motivation for our framework is driven by interactive workflows used for decaling, texturing, or painting on surfaces. Our key idea is to incorporate segmentation probabilities as weights of a classical parameterization method, implemented as a novel differentiable parameterization layer within a neural network framework. We train a segmentation network to select 3D regions that are parameterized into 2D and penalized by the resulting distortion, giving rise to segmentations which are distortion-aware. Following training, a user can use our system to interactively select a point on the mesh and obtain a large, meaningful region around the selection which induces a low-distortion parameterization.},
+  website={https://threedle.github.io/DA-Wand/},
+  pdf={https://openaccess.thecvf.com/content/CVPR2023/papers/Liu_DA_Wand_Distortion-Aware_Selection_Using_Neural_Mesh_Parameterization_CVPR_2023_paper.pdf},
+  code={https://github.com/threedle/DA-Wand},
+  preview={dawand.png},
+  note={Blender extension available at https://extensions.blender.org/approval-queue/da-wand/},
+  selected={true}
+}
+
+@InProceedings{text2mesh,
+    author    = {Michel*, Oscar and Bar-On*, Roi and Liu*, Richard and Benaim, Sagie and Hanocka, Rana},
+    title     = {Text2Mesh: Text-Driven Neural Stylization for Meshes},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2022},
+    pages     = {13492-13502},
+    preview={t2mesh.png},
+    abs={In this work, we develop intuitive controls for editing the style of 3D objects. Our framework, Text2Mesh, stylizes a 3D mesh by predicting color and local geometric details which conform to a target text prompt. We consider a disentangled representation of a 3D object using a fixed mesh input (content) coupled with a learned neural network, which we term neural style field network. In order to modify style, we obtain a similarity score between a text prompt (describing style) and a stylized mesh by harnessing the representational power of CLIP. Text2Mesh requires neither a pre-trained generative model nor a specialized 3D mesh dataset. It can handle low-quality meshes (non-manifold, boundaries, etc.) with arbitrary genus, and does not require UV parameterization. We demonstrate the ability of our technique to synthesize a myriad of styles over a wide variety of 3D meshes.},
+    website={https://threedle.github.io/text2mesh/},
+    pdf={https://arxiv.org/pdf/2112.03221},
+    video={https://www.youtube.com/watch?v=BmmdMlAWaf4},
+    code={https://github.com/threedle/text2mesh},
+    selected={true}
 }
