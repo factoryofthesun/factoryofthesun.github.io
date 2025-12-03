@@ -7,34 +7,35 @@
     month     = {October},
     year      = {2025},
     preview={wir3d.png},
-    abs={We present WIR3D, a technique for abstracting 3D shapes through a sparse set of visually meaningful curves in 3D. We optimize the parameters of Bezier curves such that they faithfully represent both the geometry and salient visual features (e.g. texture) of the shape from arbitrary viewpoints. We leverage the intermediate activations of a pre-trained foundation model (CLIP) to guide our optimization process. We divide our optimization into two phases: one for capturing the coarse geometry of the shape, and the other for representing fine-grained features. Our second phase supervision is spatially guided by a novel localized keypoint loss. This spatial guidance enables user control over abstracted features. We ensure fidelity to the original surface through a neural SDF loss, which allows the curves to be used as intuitive deformation handles. We successfully apply our method for shape abstraction over a broad dataset of shapes with varying complexity, geometric structure, and texture, and demonstrate downstream applications for feature control and shape deformation.},
+    abstract={We present WIR3D, a technique for abstracting 3D shapes through a sparse set of visually meaningful curves in 3D. We optimize the parameters of Bezier curves such that they faithfully represent both the geometry and salient visual features (e.g. texture) of the shape from arbitrary viewpoints. We leverage the intermediate activations of a pre-trained foundation model (CLIP) to guide our optimization process. We divide our optimization into two phases: one for capturing the coarse geometry of the shape, and the other for representing fine-grained features. Our second phase supervision is spatially guided by a novel localized keypoint loss. This spatial guidance enables user control over abstracted features. We ensure fidelity to the original surface through a neural SDF loss, which allows the curves to be used as intuitive deformation handles. We successfully apply our method for shape abstraction over a broad dataset of shapes with varying complexity, geometric structure, and texture, and demonstrate downstream applications for feature control and shape deformation.},
     website={https://threedle.github.io/wir3d/},
     pdf={https://arxiv.org/pdf/2505.04813},
     code={https://github.com/threedle/wir3d},
     selected={true},
+    award={true},
     award_name={Oral}
 }
 
-@inproceedings{tedi,
+@InProceedings{tedi,
               title={TEDi: Temporally-Entangled Diffusion for Long-Term Motion Synthesis},
               author={Zihan Zhang and Richard Liu and Kfir Aberman and Rana Hanocka},
               year={2024},
               booktitle={SIGGRAPH, Technical Papers},
               doi={10.1145/3641519.3657515},
               preview={tedi.gif},
-            abs={The gradual nature of a diffusion process that synthesizes samples in small increments constitutes a key ingredient of Denoising Diffusion Probabilistic Models (DDPM), which have presented unprecedented quality in image synthesis and has been recently explored in the motion domain. In this work, we propose to adapt the gradual diffusion concept (operating along a diffusion time-axis) into the temporal-axis of the motion sequence. Our key idea is to extend the DDPM framework to support temporally varying denoising, thereby entangling the two axes. Using our special formulation, we itera- tively denoise a motion buffer that contains a set of increasingly-noised poses, which auto-regressively produces an arbitrarily long stream of frames. With a stationary diffusion time-axis, in each diffusion step we increment only the temporal-axis of the motion such that the framework produces a new, clean frame which is removed from the beginning of the buffer, followed by a newly drawn noise vector that is appended to it. This new mechanism paves the way toward a new framework for long-term motion synthesis with applications to character animation and other domains.},
+            abstract={The gradual nature of a diffusion process that synthesizes samples in small increments constitutes a key ingredient of Denoising Diffusion Probabilistic Models (DDPM), which have presented unprecedented quality in image synthesis and has been recently explored in the motion domain. In this work, we propose to adapt the gradual diffusion concept (operating along a diffusion time-axis) into the temporal-axis of the motion sequence. Our key idea is to extend the DDPM framework to support temporally varying denoising, thereby entangling the two axes. Using our special formulation, we itera- tively denoise a motion buffer that contains a set of increasingly-noised poses, which auto-regressively produces an arbitrarily long stream of frames. With a stationary diffusion time-axis, in each diffusion step we increment only the temporal-axis of the motion such that the framework produces a new, clean frame which is removed from the beginning of the buffer, followed by a newly drawn noise vector that is appended to it. This new mechanism paves the way toward a new framework for long-term motion synthesis with applications to character animation and other domains.},
             website={https://threedle.github.io/TEDi/},
             pdf={https://arxiv.org/pdf/2307.15042},
-        code={https://github.com/threedle/TEDi},
-        selected={true}
+            code={https://github.com/threedle/TEDi},
+            selected={true}
     }
 
-@inproceedings{hyperfields,
+@InProceedings{hyperfields,
   title={HyperFields: Towards Zero-Shot Generation of NeRFs from Text},
   author={Babu*, Sudarshan and Liu*, Richard and Zhou*, Avery and Maire, Michael and Shakhnarovich, Greg and Hanocka, Rana},
   booktitle={Forty-first International Conference on Machine Learning},
   year={2024},
-  abs={We introduce HyperFields, a method for generating text-conditioned NeRFs with a single forward pass or with some finetuning. Key to our approach is (i) a dynamic hypernetwork, which learns a smooth mapping from text token embeddings to the space of neural radiance fields; (ii) NeRF distillation training in which we distill scenes encoded in individual NeRFs into one dynamic hypernetwork. We demonstrate that through the above techniques, the network is able to fit over a hundred unique scenes. We further demonstrate that HyperFields learns a more general map between text and NeRFs, and consquently is capable of predicting novel in-distribution and out-of-distribution scenes either zero-shot or with a few finetuning steps. HyperFields finetuning benefits from accelerated convergence thanks to the learned general map, and is capable of synthesizing novel scenes 5 to 10 times faster than existing neural-optimization based methods. We finally demonstrate that the learned representation is smooth, through smooth interpolation of text latents across different NeRF scenes.},
+  abstract={We introduce HyperFields, a method for generating text-conditioned NeRFs with a single forward pass or with some finetuning. Key to our approach is (i) a dynamic hypernetwork, which learns a smooth mapping from text token embeddings to the space of neural radiance fields; (ii) NeRF distillation training in which we distill scenes encoded in individual NeRFs into one dynamic hypernetwork. We demonstrate that through the above techniques, the network is able to fit over a hundred unique scenes. We further demonstrate that HyperFields learns a more general map between text and NeRFs, and consquently is capable of predicting novel in-distribution and out-of-distribution scenes either zero-shot or with a few finetuning steps. HyperFields finetuning benefits from accelerated convergence thanks to the learned general map, and is capable of synthesizing novel scenes 5 to 10 times faster than existing neural-optimization based methods. We finally demonstrate that the learned representation is smooth, through smooth interpolation of text latents across different NeRF scenes.},
   website={https://threedle.github.io/hyperfields/},
   pdf={https://threedle.github.io/hyperfields/static/pdf/HyperFields_cr_icml.pdf},
   code={https://github.com/threedle/hyperfields},
@@ -42,7 +43,7 @@
   selected={true}
 }
 
-@inproceedings{shapeit,
+@InProceedings{shapeit,
     author = {Gao, Chenfeng and Qian, Wanli and Liu, Richard and Hanocka, Rana and Nakagaki, Ken},
     title = {Towards Multimodal Interaction with AI-Infused Shape-Changing Interfaces},
     year = {2024},
@@ -70,13 +71,13 @@
     month     = {June},
     year      = {2023},
     pages     = {16739-16749},
-    abs={We present a neural technique for learning to select a local sub-region around a point which can be used for mesh parameterization. The motivation for our framework is driven by interactive workflows used for decaling, texturing, or painting on surfaces. Our key idea is to incorporate segmentation probabilities as weights of a classical parameterization method, implemented as a novel differentiable parameterization layer within a neural network framework. We train a segmentation network to select 3D regions that are parameterized into 2D and penalized by the resulting distortion, giving rise to segmentations which are distortion-aware. Following training, a user can use our system to interactively select a point on the mesh and obtain a large, meaningful region around the selection which induces a low-distortion parameterization.},
-  website={https://threedle.github.io/DA-Wand/},
-  pdf={https://openaccess.thecvf.com/content/CVPR2023/papers/Liu_DA_Wand_Distortion-Aware_Selection_Using_Neural_Mesh_Parameterization_CVPR_2023_paper.pdf},
-  code={https://github.com/threedle/DA-Wand},
-  preview={dawand.png},
-  note={Blender extension available at https://extensions.blender.org/approval-queue/da-wand/},
-  selected={true}
+    abstract={We present a neural technique for learning to select a local sub-region around a point which can be used for mesh parameterization. The motivation for our framework is driven by interactive workflows used for decaling, texturing, or painting on surfaces. Our key idea is to incorporate segmentation probabilities as weights of a classical parameterization method, implemented as a novel differentiable parameterization layer within a neural network framework. We train a segmentation network to select 3D regions that are parameterized into 2D and penalized by the resulting distortion, giving rise to segmentations which are distortion-aware. Following training, a user can use our system to interactively select a point on the mesh and obtain a large, meaningful region around the selection which induces a low-distortion parameterization.},
+    website={https://threedle.github.io/DA-Wand/},
+    pdf={https://openaccess.thecvf.com/content/CVPR2023/papers/Liu_DA_Wand_Distortion-Aware_Selection_Using_Neural_Mesh_Parameterization_CVPR_2023_paper.pdf},
+    code={https://github.com/threedle/DA-Wand},
+    preview={dawand.png},
+    note={Blender extension available at https://extensions.blender.org/approval-queue/da-wand/},
+    selected={true}
 }
 
 @InProceedings{text2mesh,
@@ -87,11 +88,12 @@
     year      = {2022},
     pages     = {13492-13502},
     preview={t2mesh.png},
-    abs={In this work, we develop intuitive controls for editing the style of 3D objects. Our framework, Text2Mesh, stylizes a 3D mesh by predicting color and local geometric details which conform to a target text prompt. We consider a disentangled representation of a 3D object using a fixed mesh input (content) coupled with a learned neural network, which we term neural style field network. In order to modify style, we obtain a similarity score between a text prompt (describing style) and a stylized mesh by harnessing the representational power of CLIP. Text2Mesh requires neither a pre-trained generative model nor a specialized 3D mesh dataset. It can handle low-quality meshes (non-manifold, boundaries, etc.) with arbitrary genus, and does not require UV parameterization. We demonstrate the ability of our technique to synthesize a myriad of styles over a wide variety of 3D meshes.},
+    abstract={In this work, we develop intuitive controls for editing the style of 3D objects. Our framework, Text2Mesh, stylizes a 3D mesh by predicting color and local geometric details which conform to a target text prompt. We consider a disentangled representation of a 3D object using a fixed mesh input (content) coupled with a learned neural network, which we term neural style field network. In order to modify style, we obtain a similarity score between a text prompt (describing style) and a stylized mesh by harnessing the representational power of CLIP. Text2Mesh requires neither a pre-trained generative model nor a specialized 3D mesh dataset. It can handle low-quality meshes (non-manifold, boundaries, etc.) with arbitrary genus, and does not require UV parameterization. We demonstrate the ability of our technique to synthesize a myriad of styles over a wide variety of 3D meshes.},
     website={https://threedle.github.io/text2mesh/},
     pdf={https://arxiv.org/pdf/2112.03221},
     video={https://www.youtube.com/watch?v=BmmdMlAWaf4},
     code={https://github.com/threedle/text2mesh},
     selected={true},
+    award={true},
     award_name={Oral}
 }
