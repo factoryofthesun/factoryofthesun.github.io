@@ -5,7 +5,7 @@ title: repositories
 nav: true
 nav_order: 4
 ---
-<!-- {% if site.data.repositories.github_users %}
+{% if site.data.repositories.github_users %}
 
 ## GitHub users
 
@@ -31,7 +31,7 @@ nav_order: 4
 
 {% endfor %}
 {% endif %}
-{% endif %} -->
+{% endif %}
 
 {% if site.data.repositories.github_repos %}
 
