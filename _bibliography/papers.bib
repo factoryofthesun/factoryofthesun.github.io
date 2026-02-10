@@ -1,5 +1,17 @@
 ---
 ---
+@InProceedings{dfd,
+    author    = {Liu, Richard and Lang, Itai, and Hanocka, Rana},
+    title     = {Deep Feature Deformation Weights},
+    booktitle = {ArXiv},
+    month     = {January},
+    year      = {2026},
+    preview={dfd.jpg},
+    abstract={Handle-based mesh deformation has been a long-standing paradigm in computer graphics, enabling intuitive shape edits from sparse controls. Classic techniques offer precise and rapid deformation control. However, they solve an optimization problem with constraints defined by control handle placement, requiring a user to know apriori the ideal distribution of handles on the shape to accomplish the desired edit. The mapping from handle set to deformation behavior is often unintuitive and, importantly, non-semantic. Modern data-driven methods, on the other hand, leverage a data prior to obtain semantic edits, but are slow and imprecise. We propose a technique that fuses the semantic prior of data with the precise control and speed of traditional frameworks. Our approach is surprisingly simple yet effective: deep feature proximity makes for smooth and semantic deformation weights, with no need for additional regularization. The weights can be computed in real-time for any surface point, whereas prior methods require optimization for new handles. Moreover, the semantic prior from deep features enables co-deformation of semantic parts. We introduce an improved feature distillation pipeline, barycentric feature distillation, which efficiently uses the visual signal from shape renders to minimize distillation cost. This allows our weights to be computed for high resolution meshes in under a minute, in contrast to potentially hours for both classical and neural methods. We preserve and extend properties of classical methods through feature space constraints and locality weighting. Our field representation allows for automatic detection of semantic symmetries, which we use to produce symmetry-preserving deformations. We show a proof-of-concept application which can produce deformations for meshes up to 1 million faces in real-time on a consumer-grade machine.},
+    pdf={https://arxiv.org/abs/2601.12527},
+    selected={true},
+}
+
 @InProceedings{wir3d,
     author    = {Liu, Richard and Fu, Daniel and Tan, Noah and Lang, Itai, and Hanocka, Rana},
     title     = {WIR3D: Visually-Informed and Geometry-Aware 3D Shape Abstraction},
