@@ -1,0 +1,63 @@
+# Invited talks, rendered on the homepage "talks" section via _includes/talks.liquid.
+# Each entry:
+#   event        - the venue / series (shown in bold)
+#   title        - the talk title (shown in italics)
+#   institution  - where it was given
+#   year         - shown in the year badge on the left, and in the date line
+#   month        - optional; shown in the date line (e.g. July). Leave blank to show year only.
+#   day          - optional; shown in the date line (needs month too, e.g. 8)
+#   comments     - optional note shown below the date in standard font
+#   preview      - optional; filename inside assets/img/presentation_preview/. Shows an
+#                  embedded video if a YouTube recording exists, else this image linking
+#                  to the slides PDF.
+#   linkitems    - optional buttons (e.g. Recording, Slides). Leave `link:` blank
+#                  to hide that button until you have a URL.
+
+- event: Symposium on Geometry Processing
+  title: Geometry Processing from 2D Image Priors
+  institution: University of Bern
+  year: 2026
+  month: June
+  day: 29
+  comments: Presented jointly with Dale Decatur and Nam Anh Dinh
+  preview: sgp2026.png
+  linkitems:
+    - linkname: Recording
+      link: https://www.youtube.com/watch?v=Aqdwa18H-Rg&list=PLA29N7301yZQ
+    - linkname: Slides
+      link: /assets/pdf/SGP_2026.pdf
+
+- event: Summer Geometry Institute
+  title: Introduction to Mesh Parameterization
+  institution: MIT
+  year: 2024&ndash;2026
+  month:
+  day:
+  preview: sgi.png
+  linkitems:
+    - linkname: Recording
+      link: https://mit.zoom.us/rec/play/_PJrC86rL3NcYXJgSDf4WLa60a_T0xuZsV6gkxLUwSLLgKzgTUIXN5LW5QJZlW4ciy36lGsdXjSnFF4I.xDFrXTBcJG_EI-nI?accessLevel=meeting&canPlayFromShare=true&from=share_recording_detail&continueMode=true&oldStyle=true&componentName=rec-play&originRequestUrl=https%3A%2F%2Fmit.zoom.us%2Frec%2Fshare%2FOtrxaCpLwqtSUYuZLxP79XHdAnVULGwKXd3nqhLd19AwLiLTJB52G-P2p_Xxyw4.I8pVbHkbygzwWFbO
+    - linkname: Slides
+      link: /assets/pdf/sgi_mesh_parameterization.pdf
+
+- event: Geometric Computation Group (Guibas Lab)
+  title: "Neural Mesh Parameterization: DA-Wand and Beyond"
+  institution: Stanford
+  year: 2023
+  month: August
+  day: # TODO
+  preview: stanford.png
+  linkitems:
+    - linkname: Slides
+      link: /assets/pdf/stanford_dawand_2023.pdf
+
+- event: CMSC 23700 &middot; Introduction to Computer Graphics
+  title: Introduction to Conformal Mesh Parameterization
+  institution: University of Chicago
+  year: 2022&ndash;2026
+  month:
+  day:
+  preview: cmsc23700.png
+  linkitems:
+    - linkname: Slides
+      link: /assets/pdf/CMSC23700_ConformalMeshParameterization.pdf

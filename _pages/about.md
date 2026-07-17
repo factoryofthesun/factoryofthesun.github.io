@@ -12,6 +12,7 @@ profile:
     <p><a href="../cv/cv.pdf">My resume</a></p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
+talks: true # includes the invited-talks section from _data/talks.yml
 social: true # includes social icons at the bottom of the page
 ---
 I am a 4th year PhD student in the [3DL lab](https://threedle.cs.uchicago.edu/) at UChicago advised by [Rana Hanocka](https://people.cs.uchicago.edu/~ranahanocka/).

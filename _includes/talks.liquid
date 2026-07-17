@@ -1,0 +1,152 @@
+<div class="publications talks">
+  <ol class="bibliography">
+    {% for talk in site.data.talks %}
+      {%- comment -%} Find an embeddable YouTube recording and the slides PDF link {%- endcomment -%}
+      {% assign yt_id = "" %}
+      {% assign slides_link = "" %}
+      {% if talk.linkitems %}
+        {% for item in talk.linkitems %}
+          {% assign lk = item.link | default: "" %}
+          {% if lk contains "youtube.com/watch" %}
+            {% assign yt_id = lk | split: "v=" | last | split: "&" | first %}
+          {% elsif lk contains "youtu.be/" %}
+            {% assign yt_id = lk | split: "youtu.be/" | last | split: "?" | first %}
+          {% endif %}
+          {% if item.linkname == "Slides" and item.link %}
+            {% assign slides_link = item.link %}
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+      <li>
+        <div class="row">
+          <div class="col col-sm-2 abbr">
+            {% if yt_id != "" %}
+              {%- comment -%} Click-to-play facade: swaps in the player iframe on click {%- endcomment -%}
+              <button
+                type="button"
+                class="preview z-depth-1 rounded yt-facade"
+                data-yt-id="{{ yt_id }}"
+                aria-label="Play recording: {{ talk.title }}"
+              >
+                {% if talk.preview %}
+                  {% assign talk_preview_path = talk.preview | prepend: '/assets/img/presentation_preview/' %}
+                  {%
+                    include figure.liquid loading="eager" path=talk_preview_path sizes="200px"
+                    class="yt-facade-thumb" zoomable=false avoid_scaling=true alt=talk.title
+                  %}
+                {% else %}
+                  <img class="yt-facade-thumb" src="https://i.ytimg.com/vi/{{ yt_id }}/hqdefault.jpg" alt="{{ talk.title }}" loading="lazy" />
+                {% endif %}
+                <span class="yt-facade-play" aria-hidden="true"></span>
+              </button>
+            {% elsif talk.preview %}
+              {% assign talk_preview_path = talk.preview | prepend: '/assets/img/presentation_preview/' %}
+              {% if slides_link != "" %}
+                <a href="{{ slides_link }}" target="_blank" title="Open slides (PDF)">
+                  {%
+                    include figure.liquid loading="eager" path=talk_preview_path sizes="200px"
+                    class="preview z-depth-1 rounded" zoomable=false avoid_scaling=true alt=talk.title
+                  %}
+                </a>
+              {% else %}
+                {%
+                  include figure.liquid loading="eager" path=talk_preview_path sizes="200px"
+                  class="preview z-depth-1 rounded" zoomable=false avoid_scaling=true alt=talk.title
+                %}
+              {% endif %}
+            {% endif %}
+          </div>
+          <div class="col-sm-8">
+            {% if talk.event %}
+              <div class="title">{{ talk.event }}</div>
+            {% endif %}
+            {% if talk.title %}
+              <div class="periodical"><em>{{ talk.title }}</em></div>
+            {% endif %}
+            {% capture talk_date %}{% if talk.month %}{{ talk.month }}{% if talk.day %} {{ talk.day }},{% endif %} {% endif %}{{ talk.year }}{% endcapture %}
+            {% assign talk_date = talk_date | strip %}
+            {% if talk.institution or talk_date != "" %}
+              <div class="periodical">
+                {{ talk.institution }}{% if talk.institution and talk_date != "" %} &middot; {% endif %}{{ talk_date }}
+              </div>
+            {% endif %}
+            {% if talk.comments %}
+              <div class="periodical">{{ talk.comments }}</div>
+            {% endif %}
+            {% if talk.linkitems %}
+              <div class="links">
+                {% for item in talk.linkitems %}
+                  {% if item.link %}
+                    <a href="{{ item.link }}" target="_blank" class="btn btn-sm z-depth-0" role="button">
+                      {%- if item.linkname %}{{ item.linkname }}{% else %}doc{% endif -%}
+                    </a>
+                  {% endif %}
+                {% endfor %}
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      </li>
+    {% endfor %}
+  </ol>
+</div>
+
+<script>
+  (function () {
+    let modal = null;
+    let lastFocused = null;
+
+    function close() {
+      if (!modal) return;
+      modal.remove();
+      modal = null;
+      document.body.classList.remove("yt-modal-open");
+      if (lastFocused) lastFocused.focus();
+    }
+
+    function open(facade) {
+      lastFocused = facade;
+
+      const iframe = document.createElement("iframe");
+      iframe.src = "https://www.youtube-nocookie.com/embed/" + facade.dataset.ytId + "?autoplay=1&rel=0";
+      iframe.title = facade.getAttribute("aria-label");
+      iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+      iframe.allowFullscreen = true;
+
+      const frame = document.createElement("div");
+      frame.className = "yt-modal-frame z-depth-1 rounded";
+      frame.appendChild(iframe);
+
+      const closeBtn = document.createElement("button");
+      closeBtn.type = "button";
+      closeBtn.className = "yt-modal-close";
+      closeBtn.setAttribute("aria-label", "Close video");
+      closeBtn.innerHTML = "&times;";
+
+      modal = document.createElement("div");
+      modal.className = "yt-modal";
+      modal.setAttribute("role", "dialog");
+      modal.setAttribute("aria-modal", "true");
+      modal.setAttribute("aria-label", facade.getAttribute("aria-label"));
+      modal.append(closeBtn, frame);
+
+      document.body.appendChild(modal);
+      document.body.classList.add("yt-modal-open");
+      closeBtn.focus();
+    }
+
+    document.addEventListener("click", function (e) {
+      const facade = e.target.closest(".yt-facade");
+      if (facade) {
+        open(facade);
+        return;
+      }
+      // Backdrop or close button dismisses; clicks inside the player do not.
+      if (modal && (e.target === modal || e.target.closest(".yt-modal-close"))) close();
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") close();
+    });
+  })();
+</script>
