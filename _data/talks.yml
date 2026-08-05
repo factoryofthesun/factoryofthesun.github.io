@@ -1,7 +1,7 @@
 # Invited talks, rendered on the homepage "talks" section via _includes/talks.liquid.
 # Each entry:
-#   event        - the venue / series (shown in bold)
-#   title        - the talk title (shown in italics)
+#   title        - the talk title (shown in bold)
+#   event        - the venue / series (shown in italics)
 #   institution  - where it was given
 #   year         - shown in the year badge on the left, and in the date line
 #   month        - optional; shown in the date line (e.g. July). Leave blank to show year only.

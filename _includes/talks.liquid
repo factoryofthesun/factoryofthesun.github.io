@@ -57,11 +57,11 @@
             {% endif %}
           </div>
           <div class="col-sm-8">
-            {% if talk.event %}
-              <div class="title">{{ talk.event }}</div>
-            {% endif %}
             {% if talk.title %}
-              <div class="periodical"><em>{{ talk.title }}</em></div>
+              <div class="title">{{ talk.title }}</div>
+            {% endif %}
+            {% if talk.event %}
+              <div class="periodical"><em>{{ talk.event }}</em></div>
             {% endif %}
             {% capture talk_date %}{% if talk.month %}{{ talk.month }}{% if talk.day %} {{ talk.day }},{% endif %} {% endif %}{{ talk.year }}{% endcapture %}
             {% assign talk_date = talk_date | strip %}
