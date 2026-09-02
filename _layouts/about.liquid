@@ -44,11 +44,11 @@ layout: default
       Section navigation (hidden for now — uncomment to re-enable)
       {% if page.talks or page.selected_papers %}
         <nav class="section-nav" style="margin: 1.5rem 0 0.5rem; display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center">
-          {% if page.talks %}
-            <a href="#talks" class="btncv z-depth-0">talks</a>
-          {% endif %}
           {% if page.selected_papers %}
             <a href="#selected-publications" class="btncv z-depth-0">selected publications</a>
+          {% endif %}
+          {% if page.talks %}
+            <a href="#talks" class="btncv z-depth-0">talks</a>
           {% endif %}
         </nav>
       {% endif %}
@@ -70,18 +70,18 @@ layout: default
       {% include latest_posts.liquid %}
     {% endif %}
 
-    <!-- Talks -->
-    {% if page.talks %}
-      <h2 id="talks" style="scroll-margin-top: 5rem">talks</h2>
-      {% include talks.liquid %}
-    {% endif %}
-
     <!-- Selected papers -->
     {% if page.selected_papers %}
       <h2 id="selected-publications" style="scroll-margin-top: 5rem">
         <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
       </h2>
       {% include selected_papers.liquid %}
+    {% endif %}
+
+    <!-- Talks -->
+    {% if page.talks %}
+      <h2 id="talks" style="scroll-margin-top: 5rem">talks</h2>
+      {% include talks.liquid %}
     {% endif %}
 
     <!-- Social -->
