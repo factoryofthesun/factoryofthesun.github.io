@@ -17,6 +17,8 @@ social: true # includes social icons at the bottom of the page
 ---
 I am a 5th year PhD student in the [3DL lab](https://threedle.cs.uchicago.edu/) at UChicago advised by [Rana Hanocka](https://people.cs.uchicago.edu/~ranahanocka/).
 
-My research is on applied AI for geometry processing and mesh generation, and I have explored many different avenues (hypernetworks/diffusion modeling, differentiable geometry solvers, 2D priors) towards this. 
+My research is on applied AI for geometry processing and 3D generation, and I have explored many different avenues (2D priors, hypernetworks/diffusion modeling, differentiable geometry solvers) towards this. 
 
 I am currently on a gap year working as a research engineer at [Thrixel](https://thrixel.com/).
+
+In my free time I enjoy being physically active, and I love playing volleyball, biking, and doing gymnastics (when my knees can tolerate it).
