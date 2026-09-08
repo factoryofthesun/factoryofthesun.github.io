@@ -21,4 +21,4 @@ My research is on applied AI for geometry processing and 3D generation, and I ha
 
 I am currently on a gap year working as a research engineer at [Thrixel](https://thrixel.com/).
 
-In my free time I enjoy being physically active, and I love playing volleyball, biking, and doing gymnastics (when my knees can tolerate it).
+In my free time I enjoy being physically active and especially love playing volleyball and biking. 
